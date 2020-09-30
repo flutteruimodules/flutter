@@ -60,7 +60,7 @@ body {
       canvasWidth  = canvas.width,
       canvasHeight = canvas.height,
       ctx          = canvas.getContext('2d'),
-      image        = new Image(),
+      image        = new Image('/img.png'),
       brush        = new Image();
       
   // base64 Workaround because Same-Origin-Policy
@@ -84,7 +84,7 @@ body {
   }
   
   function angleBetween(point1, point2) {
-    return Math.atan2( point2.x - point1.x, point2.y - point1.y );
+    return Math.atan2( point2.x - point1.x, point2.y - point1.y, point2.x );
   }
   
   // Only test every `stride` pixel. `stride`x faster,
